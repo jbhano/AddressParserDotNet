@@ -1,18 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2050
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibPostalNet", "LibPostalNet\LibPostalNet.csproj", "{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibPostalNet", "LibPostalNet\LibPostalNet.csproj", "{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibPostalConsole", "LibPostalConsole\LibPostalConsole.csproj", "{D5134F73-3439-420C-AA2D-B305D13D9F75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibPostalConsole", "LibPostalConsole\LibPostalConsole.csproj", "{D5134F73-3439-420C-AA2D-B305D13D9F75}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{47F5D5A8-8496-4390-92D9-273665D4DDC2}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{D0654F14-0A97-4A21-944F-61D293C3E3FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{D0654F14-0A97-4A21-944F-61D293C3E3FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,8 +24,8 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}.Debug|Any CPU.Build.0 = Debug|x64
+		{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}.Debug|x64.ActiveCfg = Debug|x64
 		{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}.Debug|x64.Build.0 = Debug|x64
 		{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}.Debug|x86.ActiveCfg = Debug|x86
@@ -36,8 +36,8 @@ Global
 		{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}.Release|x64.Build.0 = Release|x64
 		{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}.Release|x86.ActiveCfg = Release|x86
 		{7154A21B-B8A8-4A1F-A1DB-078C1F1B600E}.Release|x86.Build.0 = Release|x86
-		{D5134F73-3439-420C-AA2D-B305D13D9F75}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{D5134F73-3439-420C-AA2D-B305D13D9F75}.Debug|Any CPU.Build.0 = Debug|x64
+		{D5134F73-3439-420C-AA2D-B305D13D9F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5134F73-3439-420C-AA2D-B305D13D9F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5134F73-3439-420C-AA2D-B305D13D9F75}.Debug|x64.ActiveCfg = Debug|x64
 		{D5134F73-3439-420C-AA2D-B305D13D9F75}.Debug|x64.Build.0 = Debug|x64
 		{D5134F73-3439-420C-AA2D-B305D13D9F75}.Debug|x86.ActiveCfg = Debug|Any CPU

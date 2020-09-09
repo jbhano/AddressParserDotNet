@@ -1,4 +1,6 @@
 ﻿using LibPostalNet;
+
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,29 +27,55 @@ namespace LibPostalConsole
             }
             else
             {
+                Console.WriteLine("Starting Parser...");
                 libpostal.LibpostalSetup();
                 libpostal.LibpostalSetupParser();
                 libpostal.LibpostalSetupLanguageClassifier();
             }
 
             var query = "Av. Beira Mar 1647 - Salgueiros, 4400-382 Vila Nova de Gaia";
+            var query1 = "NatWest Markets SARs, 250 Bishopsgate, London EC2M 4AA, United Kingdom";
 
-            var response = libpostal.LibpostalParseAddress(query, new LibpostalAddressParserOptions());
+            string[] lines = System.IO.File.ReadAllLines(@"C:\JB\Study\LibPostal\DotNet\LibPostalNet\Data\Address.txt");
 
-            var x = response.Results;
-            foreach (var result in x)
+            var finalOutput = "";
+
+            foreach (string line in lines)
             {
-                Console.WriteLine(result.ToString());
+                var response = libpostal.LibpostalParseAddress(line, new LibpostalAddressParserOptions());
+
+                var x = response.Results;
+
+                var parsedAddress = line + "  :  " + System.Environment.NewLine;
+                foreach (var result in x)
+                {
+                    Console.WriteLine(result.ToString());
+                    parsedAddress = parsedAddress + result.ToString();
+
+                }
+
+                finalOutput = System.Environment.NewLine + finalOutput + parsedAddress + System.Environment.NewLine;
+
+                libpostal.LibpostalAddressParserResponseDestroy(response);
+
+                
+
+                var expansion = libpostal.LibpostalExpandAddress(line, libpostal.LibpostalGetDefaultOptions());
+                foreach (var s in expansion.Expansions)
+                {
+                    finalOutput = finalOutput + s + System.Environment.NewLine;
+                    Console.WriteLine(s);
+                }
+
+                
+
             }
 
-            libpostal.LibpostalAddressParserResponseDestroy(response);
 
-            var expansion = libpostal.LibpostalExpandAddress(query, libpostal.LibpostalGetDefaultOptions());
-            foreach (var s in expansion.Expansions)
-            {
-                Console.WriteLine(s);
-            }
-            
+            System.IO.File.WriteAllText(@"C:\JB\Study\LibPostal\DotNet\LibPostalNet\Output\ParsedAdresses.txt", finalOutput);
+
+            Console.WriteLine("Done");
+
             // Teardown (only called once at the end of your program)
             libpostal.LibpostalTeardown();
             libpostal.LibpostalTeardownParser();
